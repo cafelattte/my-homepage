@@ -1,5 +1,10 @@
 <template>
-  <HelloWorld />
+  <div>
+    <HelloWorld />
+    <v-container
+      style="height: 1000px;">
+    </v-container>
+  </div>
 </template>
 
 <script>
