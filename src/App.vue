@@ -10,7 +10,9 @@
             <router-view></router-view>
           </v-fade-transition>
         </v-container>
-      </v-content>      
+      </v-content>
+
+      <TheFooter/>
 
     </v-app>
   </div>
@@ -18,12 +20,14 @@
 
 <script>
 import TheAppBar from './components/TheAppBar';
+import TheFooter from './components/TheFooter';
 import './App.scss'
 
 export default {
   name: 'App',
   components: {
-    TheAppBar
+    TheAppBar,
+    TheFooter
   },
   data: () => ({
     //

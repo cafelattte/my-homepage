@@ -7,8 +7,8 @@
     src="https://picsum.photos/1920/1080?random"
     fade-img-on-scroll
     shrink-on-scroll
-    scroll-threshold="540">
-    
+    scroll-threshold="540"
+  >
     <template v-slot:img="{ props }">
       <v-img
         v-bind="props"
