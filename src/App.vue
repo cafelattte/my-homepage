@@ -4,6 +4,8 @@
 
       <TheAppBar/>
 
+      <TheNavigationDrawer/>
+
       <v-content>
         <v-container fluid>
           <v-fade-transition mode="out-in">
@@ -20,6 +22,7 @@
 
 <script>
 import TheAppBar from './components/TheAppBar';
+import TheNavigationDrawer from './components/TheNavigationDrawer'
 import TheFooter from './components/TheFooter';
 import './App.scss'
 
@@ -27,6 +30,7 @@ export default {
   name: 'App',
   components: {
     TheAppBar,
+    TheNavigationDrawer,
     TheFooter
   },
   data: () => ({
