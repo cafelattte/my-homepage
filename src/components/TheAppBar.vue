@@ -9,6 +9,10 @@
     shrink-on-scroll
     scroll-threshold="540"
   >
+    <v-app-bar-nav-icon
+      @click.stop="openNavigationDrawer">
+    </v-app-bar-nav-icon>
+
     <template v-slot:img="{ props }">
       <v-img
         v-bind="props"
@@ -20,13 +24,20 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      themeColor: 'teal accent-3'
+  import {mapActions} from 'vuex'
+  export default {
+    data () {
+      return {
+        themeColor: 'teal accent-3'
+      }
+    },
+
+    methods: {
+      ...mapActions('layoutParams', {
+        openNavigationDrawer: 'openNavigationDrawer'
+      })
     }
   }
-}
 </script>
 
 <style>

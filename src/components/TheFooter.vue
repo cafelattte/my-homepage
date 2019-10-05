@@ -34,26 +34,26 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-google-plus',
-        'fab fa-linkedin',
-        'fab fa-instagram',
-        'fab fa-github'
-      ],
-      description: 'made by cafelatte, SangHyun Kim'
-    }
-  },
-  computed: {
-    dateFullYear () {
-      return new Date().getFullYear()
+  export default {
+    data () {
+      return {
+        icons: [
+          'fab fa-facebook',
+          'fab fa-twitter',
+          'fab fa-google-plus',
+          'fab fa-linkedin',
+          'fab fa-instagram',
+          'fab fa-github'
+        ],
+        description: 'made by cafelatte, SangHyun Kim'
+      }
+    },
+    computed: {
+      dateFullYear () {
+        return new Date().getFullYear()
+      }
     }
   }
-}
 </script>
 
 <style>

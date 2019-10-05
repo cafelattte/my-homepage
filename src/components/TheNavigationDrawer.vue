@@ -10,13 +10,24 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      widthSize: 256
+  import {mapState, mapActions} from 'vuex'
+  export default {
+    computed: {
+      ...mapState('layoutParams', {
+        widthSize: state => state.navigationDrawerWidth
+      })
+    },
+
+    methods: {
+      ...mapActions('layoutParams', {
+        closeNavigationDrawer: 'closeNavigationDrawer'
+      })
+    },
+
+    created () {
+      this.closeNavigationDrawer()
     }
   }
-}
 </script>
 
 <style>

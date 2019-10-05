@@ -7,7 +7,8 @@
       <TheNavigationDrawer/>
 
       <v-content>
-        <v-container fluid>
+        <v-container fluid
+          @click="closeNavigationDrawer">
           <v-fade-transition mode="out-in">
             <router-view></router-view>
           </v-fade-transition>
@@ -26,6 +27,7 @@ import TheNavigationDrawer from './components/TheNavigationDrawer'
 import TheFooter from './components/TheFooter';
 import './App.scss'
 
+import {mapActions} from 'vuex'
 export default {
   name: 'App',
   components: {
@@ -36,5 +38,11 @@ export default {
   data: () => ({
     //
   }),
+
+  methods: {
+    ...mapActions('layoutParams', {
+      closeNavigationDrawer: 'closeNavigationDrawer'
+    })
+  }
 };
 </script>
